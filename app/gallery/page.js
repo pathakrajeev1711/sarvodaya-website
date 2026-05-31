@@ -3,11 +3,14 @@ import { PageHero } from "@/components/page-hero";
 import { Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
 import { imageUrl } from "@/lib/placeholders";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Gallery",
-  description: "Category-wise NGO gallery with editable captions, dates, locations, alt text, and image metadata."
-};
+  description: "See Sarvodaya Foundation field photos from education, Saheli livelihood, digital literacy, farm, and community programs in Bihar, Jharkhand, and Maharashtra.",
+  path: "/gallery",
+  keywords: ["Sarvodaya gallery", "NGO field photos", "education program photos", "women livelihood photos"]
+});
 
 export default async function GalleryPage() {
   const images = await getRows("gallery", { order: { column: "display_order" } });

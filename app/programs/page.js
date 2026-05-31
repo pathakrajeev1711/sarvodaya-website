@@ -1,11 +1,14 @@
 import { PageHero } from "@/components/page-hero";
 import { ImageCard, Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Our Work and Programs",
-  description: "Explore Sarvodaya Foundation programs including Sarvodaya Vidyapeeth, Digital Empowerment, Saheli, Farm, and IAS mentorship for rural communities."
-};
+  description: "Explore Sarvodaya Foundation programs for rural education, digital empowerment, women livelihood, sustainable farming, and IAS mentorship in Bihar, Jharkhand, and Maharashtra.",
+  path: "/programs",
+  keywords: ["Sarvodaya programs", "Sarvodaya Vidyapeeth", "Sarvodaya Saheli", "digital empowerment NGO", "women livelihood NGO"]
+});
 
 export default async function ProgramsPage() {
   const programs = await getRows("programs", { order: { column: "display_order" } });

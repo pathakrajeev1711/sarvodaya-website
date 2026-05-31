@@ -3,11 +3,14 @@ import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Section } from "@/components/ui";
 import { getSingle } from "@/lib/content";
 import { placeholderImages } from "@/lib/placeholders";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Donate and Support Us",
-  description: "Donation appeal, bank details, UPI ID, QR code, 80G information, and CSR partnership call-to-action."
-};
+  description: "Donate to Sarvodaya Foundation for Education and Skill Development and support rural education, women livelihood, digital inclusion, and sustainable community programs.",
+  path: "/donate",
+  keywords: ["donate to NGO", "support rural education", "CSR donation NGO", "80G NGO donation"]
+});
 
 export default async function DonatePage() {
   const donation = await getSingle("donation_details");

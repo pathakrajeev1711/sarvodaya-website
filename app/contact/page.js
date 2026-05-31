@@ -3,11 +3,14 @@ import { PageHero } from "@/components/page-hero";
 import { Container } from "@/components/ui";
 import { submitContact } from "@/app/actions";
 import { getSingle } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Contact Us",
-  description: "Contact Sarvodaya Foundation and submit enquiries saved in Supabase."
-};
+  description: "Contact Sarvodaya Foundation for Education and Skill Development for CSR partnerships, donations, volunteering, program support, and community development initiatives.",
+  path: "/contact",
+  keywords: ["contact Sarvodaya Foundation", "CSR partnership NGO", "donate NGO", "volunteer NGO Bihar"]
+});
 
 const contactDetails = {
   email: "sarvodayafoundation2021@gmail.com",

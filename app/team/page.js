@@ -1,11 +1,14 @@
 import { PageHero } from "@/components/page-hero";
 import { ImageCard, Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Team",
-  description: "Leadership and team members of Sarvodaya Foundation."
-};
+  description: "Meet the Sarvodaya Foundation team working for education, digital inclusion, women livelihood, sustainable farming, and rural transformation.",
+  path: "/team",
+  keywords: ["Sarvodaya Foundation team", "NGO leadership", "education NGO team"]
+});
 
 export default async function TeamPage() {
   const members = await getRows("team_members", { order: { column: "display_order" } });

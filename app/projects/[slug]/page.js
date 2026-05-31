@@ -6,10 +6,22 @@ import { PageHero } from "@/components/page-hero";
 import { ButtonLink, Container, Section } from "@/components/ui";
 import { getBySlug } from "@/lib/content";
 import { imageUrl } from "@/lib/placeholders";
+import { seoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const project = await getBySlug("projects", params.slug);
-  return { title: project?.project_name || "Project", description: project?.project_objective };
+  const title = project?.project_name || "Project";
+  const description =
+    project?.project_objective ||
+    "Sarvodaya Foundation project supporting rural education, digital literacy, women livelihood, and community development.";
+
+  return seoMetadata({
+    title,
+    description,
+    path: `/projects/${params.slug}`,
+    image: project ? imageUrl(project) : "/images/hero/community.jpg",
+    keywords: [title, "Sarvodaya project", "CSR project", "rural development project"]
+  });
 }
 
 export default async function ProjectDetailPage({ params }) {

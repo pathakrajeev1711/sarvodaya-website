@@ -4,10 +4,22 @@ import { PageHero } from "@/components/page-hero";
 import { Container } from "@/components/ui";
 import { getBySlug } from "@/lib/content";
 import { imageUrl } from "@/lib/placeholders";
+import { seoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const post = await getBySlug("blog_posts", params.slug);
-  return { title: post?.title || "News", description: post?.content?.slice(0, 150) };
+  const title = post?.title || "News";
+  const description =
+    post?.content?.slice(0, 155) ||
+    "News and updates from Sarvodaya Foundation for Education and Skill Development.";
+
+  return seoMetadata({
+    title,
+    description,
+    path: `/blog/${params.slug}`,
+    image: post ? imageUrl(post) : "/images/hero/community.jpg",
+    keywords: [title, "Sarvodaya Foundation news", "NGO update", "rural development news"]
+  });
 }
 
 export default async function BlogDetailPage({ params }) {

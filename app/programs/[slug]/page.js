@@ -4,10 +4,22 @@ import { PageHero } from "@/components/page-hero";
 import { Container, Section } from "@/components/ui";
 import { getBySlug } from "@/lib/content";
 import { imageUrl } from "@/lib/placeholders";
+import { seoMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const program = await getBySlug("programs", params.slug);
-  return { title: program?.title || "Program", description: program?.short_description };
+  const title = program?.title || "Program";
+  const description =
+    program?.short_description ||
+    "Sarvodaya Foundation program supporting rural education, digital empowerment, women livelihood, skill development, and community transformation.";
+
+  return seoMetadata({
+    title,
+    description,
+    path: `/programs/${params.slug}`,
+    image: program ? imageUrl(program) : "/images/hero/community.jpg",
+    keywords: [title, "Sarvodaya program", "NGO program Bihar", "NGO program Jharkhand", "NGO program Maharashtra"]
+  });
 }
 
 export default async function ProgramDetailPage({ params }) {

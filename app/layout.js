@@ -46,7 +46,7 @@ export async function generateMetadata() {
       type: "website",
       images: [
         {
-          url: absoluteUrl("/images/hero-community.jpg"),
+          url: absoluteUrl("/images/hero/community.jpg"),
           width: 1200,
           height: 630,
           alt: "Sarvodaya Foundation community education program"
@@ -57,11 +57,8 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title,
       description,
-      images: [absoluteUrl("/images/hero-community.jpg")]
+      images: [absoluteUrl("/images/hero/community.jpg")]
     },
-    alternates: {
-      canonical: siteUrl
-    }
   };
 }
 
@@ -72,7 +69,7 @@ export default function RootLayout({ children }) {
     name: siteName,
     url: siteUrl,
     logo: absoluteUrl("/sarvodaya-logo.png"),
-    image: absoluteUrl("/images/hero-community.jpg"),
+    image: absoluteUrl("/images/hero/community.jpg"),
     description: siteDescription,
     email: "sarvodayafoundation2021@gmail.com",
     telephone: "+91 8892198284",

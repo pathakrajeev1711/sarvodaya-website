@@ -2,11 +2,14 @@ import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Partners and Donors",
-  description: "Partners, donors, CSR supporters, and institutions supporting Sarvodaya Foundation."
-};
+  description: "Partner with Sarvodaya Foundation for CSR programs in rural education, women livelihood, digital empowerment, sustainable farming, and skill development.",
+  path: "/partners",
+  keywords: ["CSR partners NGO", "NGO donors", "CSR education Bihar", "CSR livelihood program"]
+});
 
 export default async function PartnersPage() {
   const partners = await getRows("partners", { order: { column: "display_order" } });

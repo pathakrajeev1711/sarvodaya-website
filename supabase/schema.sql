@@ -175,7 +175,7 @@ select 'Sarvodaya Foundation for Education and Skill Development', 'sarvodayafou
 where not exists (select 1 from site_settings);
 
 insert into home_sections (hero_title, hero_subtitle, hero_image_url, primary_cta_label, primary_cta_url, secondary_cta_label, secondary_cta_url)
-select 'Education, skills, and dignity for stronger communities', 'Sarvodaya Foundation works with rural and underserved communities to create opportunities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development.', '/images/kids.jpeg', 'Support Our Work', '/donate', 'Explore Programs', '/programs'
+select 'Education, skills, and dignity for stronger communities', 'Sarvodaya Foundation works with rural and underserved communities to create opportunities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development.', '/images/hero/kids.jpeg', 'Support Our Work', '/donate', 'Explore Programs', '/programs'
 where not exists (select 1 from home_sections);
 
 insert into programs (title, slug, short_description, detailed_description, cover_image_url, beneficiary_count, location, status, display_order)

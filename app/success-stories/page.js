@@ -1,11 +1,14 @@
 import { PageHero } from "@/components/page-hero";
 import { ImageCard, Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Success Stories",
-  description: "Beneficiary success stories showing before situation, support provided, and after impact."
-};
+  description: "Read Sarvodaya Foundation success stories from rural education, digital empowerment, women livelihood, and community development programs.",
+  path: "/success-stories",
+  keywords: ["NGO success stories", "beneficiary stories", "women empowerment stories", "rural education impact"]
+});
 
 export default async function SuccessStoriesPage() {
   const stories = await getRows("success_stories", { order: { column: "created_at", ascending: false } });

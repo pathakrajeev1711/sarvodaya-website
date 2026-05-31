@@ -1,10 +1,13 @@
 import { PageHero } from "@/components/page-hero";
 import { Container, Section } from "@/components/ui";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "About Us",
-  description: "Learn about Sarvodaya Foundation's mission, legal profile, values, and journey in rural education, livelihoods, digital empowerment, and sustainable farming."
-};
+  description: "Learn about Sarvodaya Foundation for Education and Skill Development, a Section 8 NGO working across Bihar, Jharkhand, and Maharashtra through education, skills, livelihoods, and community development.",
+  path: "/about",
+  keywords: ["about Sarvodaya Foundation", "Section 8 NGO", "NGO Bihar Jharkhand Maharashtra"]
+});
 
 export default function AboutPage() {
   const values = ["Community Empowerment", "Sustainability", "Rural Innovation", "Women Empowerment", "Environmental Responsibility"];

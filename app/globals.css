@@ -11,13 +11,13 @@ html {
 }
 
 body {
-  background: #f8f5ee;
+  background: #f8fafc;
   color: #1f2933;
 }
 
 ::selection {
-  background: #d7f0de;
-  color: #123d29;
+  background: #36b5c7;
+  color: #ffffff;
 }
 
 .focus-ring {

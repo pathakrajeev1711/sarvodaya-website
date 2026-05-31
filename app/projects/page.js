@@ -1,11 +1,14 @@
 import { PageHero } from "@/components/page-hero";
 import { ImageCard, Section } from "@/components/ui";
 import { getRows } from "@/lib/content";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = seoMetadata({
   title: "Projects",
-  description: "View Sarvodaya Foundation projects supporting rural education, digital literacy, women-led livelihoods, sustainable farming, and community development."
-};
+  description: "View Sarvodaya Foundation projects supporting rural education, digital literacy, women-led livelihoods, sustainable farming, and community development across Bihar, Jharkhand, and Maharashtra.",
+  path: "/projects",
+  keywords: ["NGO projects", "CSR projects Bihar", "rural development projects", "education livelihood projects"]
+});
 
 export default async function ProjectsPage() {
   const projects = await getRows("projects", { order: { column: "start_date", ascending: false } });
