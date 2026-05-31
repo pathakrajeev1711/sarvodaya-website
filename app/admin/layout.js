@@ -6,7 +6,11 @@ import { LogoutButton } from "@/components/admin/logout-button";
 import { hasSupabaseEnv, createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata = {
-  title: "Admin Dashboard"
+  title: "Admin Dashboard",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 export default async function AdminLayout({ children }) {

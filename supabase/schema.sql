@@ -174,17 +174,18 @@ insert into site_settings (organization_name, email, phone, address)
 select 'Sarvodaya Foundation for Education and Skill Development', 'sarvodayafoundation2021@gmail.com', '+91 8892198284', 'Sarvodaya Chowk, Near Kali Mandir, Dharampur, Dobhi, Gaya, Bihar - 824201'
 where not exists (select 1 from site_settings);
 
-insert into home_sections (hero_title, hero_subtitle, primary_cta_label, primary_cta_url, secondary_cta_label, secondary_cta_url)
-select 'Education, skills, and dignity for stronger communities', 'Sarvodaya Foundation works with rural and underserved communities to create opportunities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development.', 'Support Our Work', '/donate', 'Explore Programs', '/programs'
+insert into home_sections (hero_title, hero_subtitle, hero_image_url, primary_cta_label, primary_cta_url, secondary_cta_label, secondary_cta_url)
+select 'Education, skills, and dignity for stronger communities', 'Sarvodaya Foundation works with rural and underserved communities to create opportunities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development.', '/images/kids.jpeg', 'Support Our Work', '/donate', 'Explore Programs', '/programs'
 where not exists (select 1 from home_sections);
 
-insert into programs (title, slug, short_description, detailed_description, beneficiary_count, location, status, display_order)
+insert into programs (title, slug, short_description, detailed_description, cover_image_url, beneficiary_count, location, status, display_order)
 values
   (
     'Sarvodaya Vidyapeeth',
     'sarvodaya-vidyapeeth',
     'Customized rural education with digital learning, smart classes, foundational support, and practical skill-based teaching to help rural students bridge the gap with urban education.',
     'Sarvodaya Vidyapeeth helps students from underserved backgrounds bridge the gap with urban education through smart classes, digital tools, foundational academic support, and practical skill-based learning.',
+    '/images/programs/vidyapeeth.jpeg',
     4000,
     'Rural communities',
     'Ongoing',
@@ -195,6 +196,7 @@ values
     'sarvodaya-digital-empowerment',
     'A digital inclusion program providing computer education, digital literacy, online services awareness, and technology access.',
     'Sarvodaya Digital Empowerment builds confidence with computers, online services, digital literacy, safe technology use, and access to essential digital tools for underserved communities.',
+    '/images/programs/digital-empowerment.jpeg',
     3200,
     'Villages and community centers',
     'Ongoing',
@@ -205,6 +207,7 @@ values
     'sarvodaya-saheli',
     'A women empowerment and livelihood initiative supporting rural women through tailoring, employment, skills, and income generation.',
     'Sarvodaya Saheli supports rural women with tailoring training, livelihood skills, employment pathways, confidence building, and practical income generation activities.',
+    '/images/programs/saheli.jpeg',
     2500,
     'Rural and semi-urban communities',
     'Ongoing',
@@ -215,6 +218,7 @@ values
     'sarvodaya-farm',
     'Sustainable agriculture initiative promoting organic farming, Moringa plantation, medicinal plants, flower cultivation, and vermicomposting.',
     'Sarvodaya Farm promotes environmentally responsible rural farming practices through organic farming, Moringa plantation, medicinal plants, flower cultivation, vermicomposting, and sustainable agriculture awareness.',
+    '/images/programs/farm.jpeg',
     5000,
     'Rural clusters',
     'Ongoing',
@@ -225,6 +229,7 @@ values
     'sarvodaya-ias',
     'A mentorship and guidance program supporting rural students and aspirants preparing for civil services and competitive examinations.',
     'Sarvodaya IAS provides educational support, mentoring, career guidance, and preparation direction for rural students and aspirants working toward civil services and other competitive examinations.',
+    '/images/programs/ias.jpg',
     0,
     'Rural students and aspirants',
     'Ongoing',
@@ -234,6 +239,7 @@ on conflict (slug) do update set
   title = excluded.title,
   short_description = excluded.short_description,
   detailed_description = excluded.detailed_description,
+  cover_image_url = excluded.cover_image_url,
   beneficiary_count = excluded.beneficiary_count,
   location = excluded.location,
   status = excluded.status,

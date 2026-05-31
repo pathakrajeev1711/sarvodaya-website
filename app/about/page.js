@@ -3,7 +3,7 @@ import { Container, Section } from "@/components/ui";
 
 export const metadata = {
   title: "About Us",
-  description: "Mission, vision, legal profile, leadership message, and milestones of Sarvodaya Foundation."
+  description: "Learn about Sarvodaya Foundation's mission, legal profile, values, and journey in rural education, livelihoods, digital empowerment, and sustainable farming."
 };
 
 export default function AboutPage() {

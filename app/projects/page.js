@@ -4,7 +4,7 @@ import { getRows } from "@/lib/content";
 
 export const metadata = {
   title: "Projects",
-  description: "Dynamic NGO project listings with locations, partners, dates, status, outcomes, galleries, and downloadable reports."
+  description: "View Sarvodaya Foundation projects supporting rural education, digital literacy, women-led livelihoods, sustainable farming, and community development."
 };
 
 export default async function ProjectsPage() {

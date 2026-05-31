@@ -4,7 +4,7 @@ import { getRows } from "@/lib/content";
 
 export const metadata = {
   title: "Our Work and Programs",
-  description: "Dynamic program cards for women empowerment, skill development, digital awareness, livelihoods, education, rural development, and welfare."
+  description: "Explore Sarvodaya Foundation programs including Sarvodaya Vidyapeeth, Digital Empowerment, Saheli, Farm, and IAS mentorship for rural communities."
 };
 
 export default async function ProgramsPage() {

@@ -23,7 +23,7 @@ import { imageUrl, placeholderImages } from "@/lib/placeholders";
 export const metadata = {
   title: "Sarvodaya Foundation for Education and Skill Development",
   description:
-    "Sarvodaya Foundation works with rural communities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development."
+    "Sarvodaya Foundation for Education and Skill Development works with rural communities through education, digital empowerment, women-led livelihoods, sustainable farming, and skill development."
 };
 
 const trustBadges = [
@@ -50,19 +50,19 @@ const programIcons = {
 
 const whyCards = [
   {
-    title: "Education Gap",
+    title: "Sarvodaya Vidyapeeth",
     icon: BookOpen,
-    text: "Many rural children still learn with fewer resources, limited guidance, and little exposure to digital tools."
+    text: "Poverty, distance, and outdated education systems continue to keep many rural children out of quality classrooms. Many leave school early to support their families, while girls face an even greater risk of educational exclusion. Without access to modern learning and skills, the cycle of poverty continues from one generation to the next."
   },
   {
     title: "Livelihood Challenges",
     icon: BriefcaseBusiness,
-    text: "Families need practical skills and local earning pathways that can turn effort into steady dignity."
+    text: "Small farms, limited employment opportunities, and lack of skill training leave many rural families trapped in poverty. Youth often depend on low-paying daily wage work, while women and girls face social and mobility barriers that restrict their access to income-generating opportunities. Without skills, resources, and local livelihoods, economic progress remains out of reach for many rural communities."
   },
   {
     title: "Digital Exclusion",
     icon: Laptop,
-    text: "Without digital confidence, essential services, learning, and opportunities remain out of reach."
+    text: "Millions of rural citizens remain excluded from the digital world due to limited access to computers, internet connectivity, and technology education. As government services, jobs, banking, and learning opportunities move online, the lack of digital skills creates a new form of inequality. Bridging the digital divide is essential to ensure that rural communities can participate fully in the opportunities of the modern world."
   }
 ];
 
@@ -148,7 +148,7 @@ export default async function HomePage() {
       <section className="bg-[#F8F5EE] py-16 sm:py-20">
         <Container className="grid items-center gap-10 lg:grid-cols-2">
           <div className="reveal relative min-h-[330px] overflow-hidden rounded-2xl shadow-soft">
-            <Image src={placeholderImages.women} alt="Community members working with Sarvodaya Foundation" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+            <Image src="/images/hero-community.jpg" alt="Community members working with Sarvodaya Foundation" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
           </div>
           <div className="reveal">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#B68D40]">About Sarvodaya</p>

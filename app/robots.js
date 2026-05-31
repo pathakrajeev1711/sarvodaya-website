@@ -1,7 +1,15 @@
+import { siteUrl } from "@/lib/seo";
+
 export default function robots() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: `${baseUrl}/sitemap.xml`
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin", "/admin/", "/admin/login"]
+      }
+    ],
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl
   };
 }
