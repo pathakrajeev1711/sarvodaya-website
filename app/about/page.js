@@ -29,8 +29,8 @@ export default function AboutPage() {
     },
     {
       year: "2022",
-      title: "Sarvodaya Saheli Launched",
-      text: "Started tailoring and livelihood programs focused on skills, employment, and income generation."
+      title: "Skills Training Began",
+      text: "Starting with just seven laptops and a few sewing machines, we began training rural youth and women with skills for a better future."
     },
     {
       year: "2023",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import { Container } from "@/components/ui";
 
@@ -34,12 +35,18 @@ export function SiteFooter() {
       <Container className="grid gap-8 py-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-[1.35fr_1fr_1fr_1.15fr] lg:gap-10">
         <div>
           <div className="mx-auto mb-4 flex max-w-sm items-center justify-center gap-3 md:mx-0 md:justify-start">
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[#36B5C7]/30 bg-white/10 text-lg font-extrabold text-[#8BC34A]">
-              SF
+            <span className="grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-full bg-white p-1.5 shadow-sm">
+              <Image
+                src="/sarvodaya-logo.png"
+                alt="Sarvodaya Foundation logo"
+                width={48}
+                height={48}
+                className="h-full w-full rounded-full object-contain"
+              />
             </span>
             <p className="text-left text-base font-extrabold leading-5 text-[#F5F5F0]">
               Sarvodaya Foundation
-              <span className="block text-xs font-semibold text-[#D6D3C9]">for Education and Skill Development</span>
+              <span className="mt-0.5 block text-xs font-semibold leading-4 text-[#D6D3C9]">for Education and Skill Development</span>
             </p>
           </div>
           <h2 className="text-lg font-extrabold tracking-wide">About Sarvodaya</h2>
