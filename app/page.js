@@ -14,7 +14,7 @@ export default async function HomePage() {
     getSingle("home_sections"),
     getRows("programs", { order: { column: "display_order" }, limit: 5 }),
     getRows("success_stories", { order: { column: "created_at", ascending: false }, limit: 3 }),
-    getRows("gallery", { order: { column: "display_order" }, limit: 8 })
+    getRows("gallery", { order: { column: "display_order" }, limit: 10 })
   ]);
 
   return <AnimatedHomePage home={home} programs={programs} stories={stories} gallery={gallery} />;

@@ -14,7 +14,7 @@ const iconMap = {
   "Sarvodaya Digital Empowerment": Laptop,
   "Sarvodaya Saheli": Users,
   "Sarvodaya Farm": Sprout,
-  "Sarvodaya IAS": GraduationCap,
+  "Sarvodaya Youth Empowerment": GraduationCap,
   "Children Enrolled": BookOpen,
   "Women Trained": Users,
   "Orders Completed": BriefcaseBusiness,

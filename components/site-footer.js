@@ -8,7 +8,7 @@ const programs = [
   ["Sarvodaya Digital Empowerment", "/programs/sarvodaya-digital-empowerment"],
   ["Sarvodaya Saheli", "/programs/sarvodaya-saheli"],
   ["Sarvodaya Farm", "/programs/sarvodaya-farm"],
-  ["Sarvodaya IAS", "/programs/sarvodaya-ias"]
+  ["Sarvodaya Youth Empowerment", "/programs/sarvodaya-youth-empowerment"]
 ];
 
 const quickLinks = [

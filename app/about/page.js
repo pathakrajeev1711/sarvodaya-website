@@ -34,8 +34,8 @@ export default function AboutPage() {
     },
     {
       year: "2023",
-      title: "Sarvodaya IAS Started",
-      text: "Initiated mentorship and guidance support for students preparing for civil services and competitive examinations."
+      title: "Sarvodaya Youth Empowerment Started",
+      text: "Initiated mentorship and guidance support for rural youth, including Sarvodaya IAS support for civil services and competitive examinations."
     },
     {
       year: "2024",

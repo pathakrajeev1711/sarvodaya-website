@@ -52,7 +52,7 @@ const locations = [
     address: "Datpa, Deo, Aurangabad, Bihar - 824111"
   },
   {
-    title: "Sarvodaya IAS",
+    title: "Sarvodaya Youth Empowerment",
     address: "Near Chopra Agency, Bisar Talab, Jaiprakash Nagar, Gaya, Bihar - 823001"
   }
 ];

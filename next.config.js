@@ -11,6 +11,15 @@ const nextConfig = {
         hostname: "images.unsplash.com"
       }
     ]
+  },
+  async redirects() {
+    return [
+      {
+        source: "/programs/sarvodaya-ias",
+        destination: "/programs/sarvodaya-youth-empowerment",
+        permanent: true
+      }
+    ];
   }
 };
 

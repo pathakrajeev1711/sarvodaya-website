@@ -5,7 +5,7 @@ import { seoMetadata } from "@/lib/seo";
 
 export const metadata = seoMetadata({
   title: "Our Work and Programs",
-  description: "Explore Sarvodaya Foundation programs for rural education, digital empowerment, women livelihood, sustainable farming, and IAS mentorship in Bihar, Jharkhand, and Maharashtra.",
+  description: "Explore Sarvodaya Foundation programs for rural education, digital empowerment, women livelihood, sustainable farming, youth empowerment, and IAS mentorship in Bihar, Jharkhand, and Maharashtra.",
   path: "/programs",
   keywords: ["Sarvodaya programs", "Sarvodaya Vidyapeeth", "Sarvodaya Saheli", "digital empowerment NGO", "women livelihood NGO"]
 });

@@ -6,6 +6,16 @@ import { getBySlug } from "@/lib/content";
 import { imageUrl } from "@/lib/placeholders";
 import { seoMetadata } from "@/lib/seo";
 
+const farmGalleryImages = [
+  "/images/programs/farm-aurangabad/farm-aurangabad-01.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-02.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-03.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-04.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-05.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-06.jpeg",
+  "/images/programs/farm-aurangabad/farm-aurangabad-07.jpg"
+];
+
 export async function generateMetadata({ params }) {
   const program = await getBySlug("programs", params.slug);
   const title = program?.title || "Program";
@@ -44,6 +54,29 @@ export default async function ProgramDetailPage({ params }) {
           </div>
         </div>
       </Section>
+      {program.slug === "sarvodaya-farm" ? (
+        <Section
+          title="Farm Field Gallery"
+          intro="A closer look at Sarvodaya Farm activities and sustainable farming work in Datpa, Aurangabad."
+          className="bg-slate-50"
+        >
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {farmGalleryImages.map((src, index) => (
+              <figure key={src} className="group overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={src}
+                    alt={`Sarvodaya Farm Datpa Aurangabad field activity ${index + 1}`}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 33vw, 50vw"
+                  />
+                </div>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      ) : null}
     </>
   );
 }
